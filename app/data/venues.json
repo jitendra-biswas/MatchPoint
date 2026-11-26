@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Field Futsal Sanepa",
+    "location": "Lalitpur",
+    "city": "Lalitpur",
+    "address": "Sanepa Heights, Lalitpur",
+    "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800",
+    "availableCourts": 2,
+    "facilities": [
+      "Covered Roofing (Rainproof)",
+      "Air Ventilation System",
+      "Changing Rooms & Hot Showers",
+      "Free Parking"
+    ],
+    "startingPrice": 1600,
+    "rating": 4.8,
+    "reviewsCount": 64,
+    "courtType": "5A-Side (Indoor)",
+    "timing": "06:00 AM - 10:00 PM",
+    "contactPhone": "+977 9801122334"
+  },
+  {
+    "id": 2,
+    "name": "Dhuku Futsal Hub",
+    "location": "Kathmandu",
+    "city": "Kathmandu",
+    "address": "Dhumbarahi, Kathmandu",
+    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800",
+    "availableCourts": 3,
+    "facilities": [
+      "Premium Artificial Turf",
+      "LED Floodlights",
+      "Ample Parking",
+      "Cafeteria Available"
+    ],
+    "startingPrice": 1800,
+    "rating": 4.9,
+    "reviewsCount": 89,
+    "courtType": "5A-Side & 6A-Side",
+    "timing": "06:00 AM - 11:00 PM",
+    "contactPhone": "+977 9841234567"
+  },
+  {
+    "id": 3,
+    "name": "Kick Off Futsal",
+    "location": "Bhaktapur",
+    "city": "Bhaktapur",
+    "address": "Suryabinayak, Bhaktapur",
+    "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800",
+    "availableCourts": 1,
+    "facilities": [
+      "Covered Roofing",
+      "Changing Rooms",
+      "Cafeteria Available",
+      "Bike Parking"
+    ],
+    "startingPrice": 1400,
+    "rating": 4.6,
+    "reviewsCount": 38,
+    "courtType": "5A-Side",
+    "timing": "06:00 AM - 09:00 PM",
+    "contactPhone": "+977 9812345678"
+  },
+  {
+    "id": 4,
+    "name": "Shantinagar Futsal Club",
+    "location": "Kathmandu",
+    "city": "Kathmandu",
+    "address": "Shantinagar Gate, Kathmandu",
+    "image": "https://images.unsplash.com/photo-1587384474964-3a06ce1ce699?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "availableCourts": 2,
+    "facilities": [
+      "FIFA Standard Turf",
+      "Spectator Gallery",
+      "Cold Beverages",
+      "Locker Facility"
+    ],
+    "startingPrice": 1500,
+    "rating": 4.7,
+    "reviewsCount": 52,
+    "courtType": "5A-Side (Covered)",
+    "timing": "06:00 AM - 10:00 PM",
+    "contactPhone": "+977 9851098765"
+  },
+  {
+    "id": 5,
+    "name": "Velocity Sports Arena",
+    "location": "Lalitpur",
+    "city": "Lalitpur",
+    "address": "Jhamsikhel, Lalitpur",
+    "image": "https://images.unsplash.com/photo-1774798153992-b65a06c319db?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    "availableCourts": 4,
+    "facilities": [
+      "Shock Absorption Turf",
+      "Live Video Replay",
+      "Sports Lounge",
+      "Shower & Lockers"
+    ],
+    "startingPrice": 2000,
+    "rating": 4.9,
+    "reviewsCount": 112,
+    "courtType": "5A-Side & 7A-Side",
+    "timing": "05:00 AM - 11:30 PM",
+    "contactPhone": "+977 9801998877"
+  },
+  {
+    "id": 6,
+    "name": "Pokhara Futsal Paradise",
+    "location": "Pokhara",
+    "city": "Pokhara",
+    "address": "Lakeside Street 6, Pokhara",
+    "image": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=800",
+    "availableCourts": 2,
+    "facilities": [
+      "Scenic Lake View",
+      "Night Floodlights",
+      "Juice Bar",
+      "Tournaments Ready"
+    ],
+    "startingPrice": 1500,
+    "rating": 4.8,
+    "reviewsCount": 73,
+    "courtType": "5A-Side (Outdoor)",
+    "timing": "06:00 AM - 10:00 PM",
+    "contactPhone": "+977 9860123456"
+  },
+  {
+    "id": 7,
+    "name": "Royal Sports Futsal",
+    "location": "Lalitpur",
+    "city": "Lalitpur",
+    "address": "Satdobato, Lalitpur",
+    "image": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=800",
+    "availableCourts": 3,
+    "facilities": [
+      "All-Weather Turf",
+      "Changing Rooms",
+      "Dedicated Car Parking",
+      "Sound System"
+    ],
+    "startingPrice": 1700,
+    "rating": 4.7,
+    "reviewsCount": 45,
+    "courtType": "5A-Side & 6A-Side",
+    "timing": "06:00 AM - 10:30 PM",
+    "contactPhone": "+977 9841887766"
+  },
+  {
+    "id": 8,
+    "name": "Kumari Futsal Center",
+    "location": "Kathmandu",
+    "city": "Kathmandu",
+    "address": "Chabahil, Kathmandu",
+    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800",
+    "availableCourts": 1,
+    "facilities": [
+      "Rainproof Canopy",
+      "Mineral Water Refill",
+      "First Aid Station",
+      "Bike Parking"
+    ],
+    "startingPrice": 1300,
+    "rating": 4.5,
+    "reviewsCount": 31,
+    "courtType": "5A-Side",
+    "timing": "06:00 AM - 09:30 PM",
+    "contactPhone": "+977 9811224466"
+  },
+  {
+    "id": 9,
+    "name": "Himalayan Futsal Hub",
+    "location": "Bhaktapur",
+    "city": "Bhaktapur",
+    "address": "Sallaghari, Bhaktapur",
+    "image": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=800",
+    "availableCourts": 2,
+    "facilities": [
+      "New Generation Turf",
+      "Viewing Balcony",
+      "Free High-Speed WiFi",
+      "Changing Rooms"
+    ],
+    "startingPrice": 1350,
+    "rating": 4.6,
+    "reviewsCount": 29,
+    "courtType": "5A-Side (Covered)",
+    "timing": "06:00 AM - 09:30 PM",
+    "contactPhone": "+977 9823456789"
+  }
+]

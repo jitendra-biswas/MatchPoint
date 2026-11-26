@@ -2,11 +2,12 @@
 
 import FootsalArenaCard from "./FootsalArenaCard";
 import ArenaBookingModal from "./ArenaBookingModal";
+import VenueDetailsModal from "./VenueDetailsModal";
 import Link from "next/link";
 import { useState } from "react";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { useUser, useClerk } from "@clerk/nextjs";
-
+import venuesData from "@/app/data/venues.json";
 
 export interface FutsalArena {
   id: number;
@@ -17,70 +18,35 @@ export interface FutsalArena {
   availableCourts: number;
   facilities: string[];
   startingPrice: number;
+  city?: string;
+  rating?: number;
+  reviewsCount?: number;
+  courtType?: string;
+  timing?: string;
+  contactPhone?: string;
 }
 
 const FeaturedFootsalArena = () => {
   const [selectedArena, setSelectedArena] = useState<FutsalArena | null>(null);
+  const [detailsModalVenue, setDetailsModalVenue] = useState<FutsalArena | null>(null);
   const { isLoaded, isSignedIn } = useUser();
   const { redirectToSignIn } = useClerk();
 
+  // Pick top 3 featured arenas directly from the shared venues JSON data
+  const futsalArenas: FutsalArena[] = venuesData.slice(0, 3) as FutsalArena[];
 
-  const futsalArenas = [
-    {
-      id: 1,
-      name: "Field Futsal Sanepa",
-      location: "Lalitpur",
-      address: "Sanepa Heights, Lalitpur",
-      image:
-        "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800",
-      availableCourts: 2,
-      facilities: [
-        "Covered Roofing (Rainproof)",
-        "Air Ventilation System",
-        "Changing Rooms & Hot Showers",
-      ],
-      startingPrice: 1600,
-    },
-    {
-      id: 2,
-      name: "Dhuku Futsal Hub",
-      location: "Kathmandu",
-      address: "Dhumbarahi, Kathmandu",
-      image:
-        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800",
-      availableCourts: 3,
-      facilities: [
-        "Premium Artificial Turf",
-        "Floodlights",
-        "Parking Available",
-      ],
-      startingPrice: 1800,
-    },
-    {
-      id: 3,
-      name: "Kick Off Futsal",
-      location: "Bhaktapur",
-      address: "Suryabinayak, Bhaktapur",
-      image:
-        "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800",
-      availableCourts: 1,
-      facilities: ["Covered Roofing", "Changing Rooms", "Cafeteria Available"],
-      startingPrice: 1400,
-    },
-  ];
+  const handleBooking = (arena: FutsalArena) => {
+    if (!isLoaded) return;
 
- const handleBooking = (arena: FutsalArena) => {
-  if (!isLoaded) return;
+    if (!isSignedIn) {
+      redirectToSignIn({
+        redirectUrl: window.location.href,
+      });
+      return;
+    }
 
-  if (!isSignedIn) {
-    redirectToSignIn({
-      redirectUrl: window.location.href,
-    });
-    return;
-  }
-
-  setSelectedArena(arena);
-};
+    setSelectedArena(arena);
+  };
 
   return (
     <div id="exploreVenues" className="relative w-full min-h-screen bg-[#0B0F14] px-36 max-md:px-3 pb-10">
@@ -105,15 +71,24 @@ const FeaturedFootsalArena = () => {
         </Link>
       </div>
 
-      <div className="mt-10 flex max-md:flex-col max-md:gap-5 justify-between">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {futsalArenas.map((arena) => (
           <FootsalArenaCard
             key={arena.id}
             arena={arena}
             showBookingCard={() => handleBooking(arena)}
+            onShowDetails={() => setDetailsModalVenue(arena)}
           />
         ))}
       </div>
+
+      {detailsModalVenue && (
+        <VenueDetailsModal
+          venue={detailsModalVenue}
+          onClose={() => setDetailsModalVenue(null)}
+          onBookNow={handleBooking}
+        />
+      )}
 
       {selectedArena && (
         <ArenaBookingModal

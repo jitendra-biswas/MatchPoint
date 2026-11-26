@@ -8,6 +8,7 @@ export default async function DashboardRouter() {
   if (!user) redirect("/sign-in");
 
   const role = user.unsafeMetadata?.role ?? user.publicMetadata?.role;
+  if (role === "admin") redirect("/admin");
   if (role === "owner") redirect("/dashboard/owner");
 
   redirect("/dashboard/player");

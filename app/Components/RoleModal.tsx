@@ -30,7 +30,11 @@ const emptySubscribe = () => () => {};
 
 const RoleModal = ({ open, onClose }: RoleModalProps) => {
   const router = useRouter();
-  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
 
   // lock scroll + close on Esc
   useEffect(() => {
@@ -121,7 +125,7 @@ const RoleModal = ({ open, onClose }: RoleModalProps) => {
         </motion.div>
       )}
     </AnimatePresence>,
-    document.body
+    document.body,
   );
 };
 

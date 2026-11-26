@@ -5,7 +5,7 @@ import { FiShield, FiMapPin } from 'react-icons/fi'
 
 const Footer = () => {
   const exploreLinks = [
-    { name: "Futsal Venues", href: "/venues" },
+    { name: "Futsal Venues", href: "/allvenues" },
     { name: "Join Public Matches", href: "/matches" },
     { name: "Find Teams & Clubs", href: "/teams" },
     { name: "Organize a Tournament", href: "/tournaments" }

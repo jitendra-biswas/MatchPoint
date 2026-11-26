@@ -8,10 +8,10 @@ import { Show, UserButton } from "@clerk/nextjs";
 import RoleModal from "./RoleModal";
 
 const navElem = [
-  { name: "Explore Venues", link: "#exploreVenues" },
-  { name: "Find Matches", link: "#findMatches" },
-  { name: "Teams", link: "#teams" },
-  { name: "How It Works", link: "#howItWorks" },
+  { name: "Explore Venues", link: "/allvenues" },
+  { name: "Find Matches", link: "/#findMatches" },
+  { name: "Teams", link: "/#teams" },
+  { name: "How It Works", link: "/#howItWorks" },
 ];
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <div className="fixed flex flex-col w-full bg-[#0C1114]/70 max-md:bg-[#0C1114] backdrop-blur-xs text-white z-99">
       <nav className="w-full h-20 text-white flex items-center px-36 max-md:px-10 max-lg:px-10 justify-between border-b border-b-zinc-700">
-        <div className="logo flex items-center gap-2">
+        <Link href="/" className="logo flex items-center gap-2 hover:opacity-90 transition">
           <div className="left w-10 h-10 border border-zinc-800 bg-[#161F29] flex items-center justify-center rounded-xl">
             <SlTrophy className="text-[#B7F34A]" />
           </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
               Footsal System
             </p>
           </div>
-        </div>
+        </Link>
 
         <div className="elems flex gap-5 max-md:hidden">
           {navElem.map((elem, idx) => (
